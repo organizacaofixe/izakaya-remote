@@ -1,0 +1,491 @@
+/*========== Google Fonts ==========*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Open+Sans&display=swap");
+
+/*========== Webkits ==========*/
+::-webkit-scrollbar {
+  display: none;
+}
+
+/*========== Css Variables ==========*/
+:root {
+  --primary-font-family: "Montserrat", sans-serif;
+  --secondary-font-family: "montserrat", sans-serif;
+  --hero-heading-font-weight: 300;
+  --hero-about-font-weight: 400;
+  --footer-heading-1-font-weight: 900;
+  --footer-heading-2-font-weight: 600;
+  --footer-contacts-font-weight: 400;
+  --primary-text-color: #000000;
+  --secondary-text-color: #656053;
+  --primary-background-color: #ffffff;
+  --line-color: #555243;
+}
+
+/*========== Scroll Bar ==========*/
+/*========== Images ==========*/
+.hero-informacao-img {
+  background: url("../IMAGES/sobre-nos-hero-informacao-imagem.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.hero-informacao-img-2 {
+  background: url("../IMAGES/sobre-nos-informacao-3.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.hero-informacao-img-3 {
+  background: url("../IMAGES/sobre-nos-informacao-2.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.footer-img {
+  background: url("../IMAGES/footer-imagem.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/*========== Main Css ==========*/
+/*#region Main Css*/
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/*#endregion*/
+/*========== Header ==========*/
+/*#region Header*/
+header {
+  position: fixed;
+  width: 100%;
+  height: 100px;
+  z-index: 999;
+  padding: 0px 2.3125em;
+}
+header .fa-bars {
+  position: absolute;
+  top: calc(60px - 0.9rem);
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+header .fa-times {
+  cursor: pointer;
+  position: fixed;
+  margin-left: 85%;
+  margin-right: 15%;
+  font-size: 1.8rem;
+  top: calc(60px - 0.9rem);
+}
+header .header-wrapper {
+  width: 100%;
+  height: 100%;
+}
+header nav {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: var(--primary-background-color);
+  width: 20.5%;
+  height: 100vh;
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-in-out;
+  z-index: 999;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+header nav .nav-wrapper {
+  padding: 0 20px;
+  height: 100%;
+}
+header nav .nav-wrapper ul li {
+  width: 100%;
+  transition: 0.3s ease;
+}
+header nav .nav-wrapper ul li:hover {
+  transform: scale(1.3);
+}
+header nav .nav-wrapper ul a {
+  color: var(--primary-text-color);
+  padding: 0 20px;
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  line-height: 2;
+  font-family: var(--primary-font-family);
+  font-size: 1.34rem;
+  font-weight: var(--footer-heading-1-font-weight);
+}
+header nav .nav-wrapper .nav-bar-social-icons {
+  padding: 10px 0;
+}
+header nav .nav-wrapper .nav-bar-social-icons a {
+  padding-left: 20px;
+  font-size: 2rem;
+}
+header nav .nav-wrapper .nav-bar-social-icons .fa-facebook-square {
+  color: #3B5998;
+}
+header nav .nav-wrapper .nav-bar-social-icons .fa-instagram-square {
+  color: #C536A4;
+}
+
+.open-nav {
+  transform: translateX(0%);
+}
+
+/*#endregion */
+/*========== Sections ==========*/
+/*#region Sections*/
+section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/*#endregion */
+/*========== Slider Container ==========*/
+/*#region Slider Container*/
+.slider-container {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  transition: transform 0.5s ease-in-out;
+  overflow: hidden;
+}
+
+/*#endregion */
+/*========== Left Side Container ==========*/
+/*#region Left Side Container*/
+.left-side-container {
+ position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100vh;
+  transition: transform 0.5s ease-in-out; 
+}
+
+/*#endregion */
+/*#region Hero Restaurant Image Left Side*/
+.hero-img-left-side {
+  background: url("../IMAGES/sobre-nos-hero-imagem-ls.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100%;
+  width: 100%;
+  height: 100vh;
+}
+
+/*#endregion */
+/*#region Restaurant Information Container Left Side*/
+.hero-container-informacao-left-side {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-informacao-content-container-left-side {
+  padding: 0 37px;
+}
+
+.hero-informacao-title {
+  font-size: 4rem;
+  font-weight: 500;
+  font-family: var(--primary-font-family);
+  font-weight: var(--hero-heading-font-weight);
+}
+
+.hero-informacao-line-container {
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  padding: 20px 0;
+}
+
+.hero-informacao-line {
+  border: solid 2px var(--line-color);
+  width: 100px;
+}
+
+.hero-informacao-subhead {
+  font-size: 1.06rem;
+  font-weight: var(--hero-about-font-weight);
+  font-family: var(--secondary-font-family);
+  text-align: justify;
+  line-height: 1.6;
+}
+
+/*#endregion */
+/*#region Left Side Footer*/
+.footer-container-left-side {
+  display: flex;
+  align-items: left;
+  justify-content: left;
+}
+
+.footer-content-container {
+  padding: 0 37px;
+}
+
+.footer-content-title-subhead-container {
+  margin-top: 10px;
+}
+
+.footer-content-contacts-container {
+  margin-top: 10px;
+}
+
+.footer-content-socialmedia {
+  margin-top: 10px;
+}
+
+.footer-content-title {
+  font-size: 2.35rem;
+  font-weight: var(--footer-heading-1-font-weight);
+  font-family: var(--primary-font-family);
+}
+
+.footer-content-subhead {
+  font-size: 1.55rem;
+  font-weight: var(--footer-heading-2-font-weight);
+  font-family: var(--primary-font-family);
+  color: var(--secondary-text-color);
+}
+
+.footer-content-contacts {
+  font-size: 1.3rem;
+  font-weight: var(--footer-contacts-font-weight);
+  font-family: var(--secondary-font-family);
+  line-height: 1.6;
+}
+.footer-content-contacts a {
+  color: var(--primary-text-color);
+}
+
+.social-media-icon i {
+  font-size: 2rem;
+}
+.social-media-icon .fa-facebook-square {
+  color: #3B5998;
+}
+.social-media-icon .fa-instagram-square {
+  padding: 0 0.6em;
+  color: #C536A4;
+}
+
+/*#endregion*/
+/*========== Right Side Container ==========*/
+/*#region Right Side Container*/
+.right-side-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100vh;
+  transition: transform 0.5s ease-in-out;
+}
+
+/*#endregion */
+/*#region Hero Restaurant Image Right Side*/
+.hero-img-right-side {
+  background: url("../IMAGES/sobre-nos-hero-imagem-rs.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+
+/*#endregion */
+/*#region Restaurant Information Container Right Side*/
+.hero-informacao-img {
+  background-position: 50% 50%;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-informacao-img-2 {
+  background-position: 10% 90%;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-informacao-img-3 {
+  background-position: 50% 50%;
+  width: 100%;
+  height: 100%;
+}
+
+/*#endregion */
+/*#region Right Side Footer*/
+.footer-img {
+  background-position: 50% 50%;
+  width: 100%;
+  height: 100%;
+}
+
+/*#endregion*/
+/*========== Media Queries (max-width: 768px) ==========*/
+@media only screen and (max-width: 480px) {
+  /*========== Sections ==========*/
+  /*#region Sections*/
+  section {
+    height: 150vh;
+  }
+  /*#endregion*/
+  /*========== Navigation Bar ==========*/
+  /*#region Header*/
+  header {
+    background-color: var(--primary-background-color);
+    width: 100%;
+    height: 60px;
+  }
+  header nav {
+    width: 100%;
+    transform: none;
+    height: 50vh;
+    transform: translateY(-100%);
+  }
+  header nav .nav-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  header .fa-bars {
+    position: absolute;
+    top: calc(30px - 0.9rem);
+    color: black;
+  }
+  .open-nav {
+    transform: translateY(0%);
+  }
+  /*#endregion*/
+  /*========== Slider Container ==========*/
+  /*#region Slider Container*/
+  .slider-container {
+    overflow: scroll;
+    height: 150vh;
+  }
+  /*#endregion*/
+  /*========== Left Side Container ==========*/
+  /*#region Left Side Container*/
+  .left-side-container {
+    display: none;
+  }
+  /*#endregion */
+  /*#region Hero Restaurant Image Container Left Side*/
+  .hero-img-container-left-side {
+    height: 100vh;
+  }
+  /*#endregion */
+  /*#region Restaurant Information Container Left Side*/
+  .hero-container-informacao-left-side {
+    display: block;
+    margin-left: 200px;
+  }
+  .hero-informacao-content-container-left-side {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    padding: 0 37px;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+  }
+  .hero-img-informacao-container-left-side {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20%;
+  }
+  .hero-informacao-line-container {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+  }
+  /*#endregion */
+  /*#region Left Side Footer*/
+  .footer-container-left-side {
+    display: block;
+  }
+  .footer-content-container {
+    position: relative;
+    width: 100%;
+    height: 80%;
+  }
+  .footer-img-container-left-side {
+    position: relative;
+    width: 100%;
+    height: 20%;
+  }
+  .footer-img-container-left-side .footer-img {
+    background: url(../IMAGES/footer-imagem.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+  }
+
+  
+  /*#endregion */
+  /*========== Right Side Container ==========*/
+  /*#region Right Side Container*/
+  .right-side-container {
+    display: none;
+  }
+  /*#endregion */
+}
+
+
+/*========== Media Queries (min-width: 350px) and (max-width: 480px) ==========*/
+@media only screen and (min-width: 1919px) {
+  html {
+    font-size: 22px;
+  }
+}
+/*========== Media Queries (min-width: 350px) and (max-width: 480px) ==========*/
+@media only screen and (min-width: 1365px) and (max-width: 1918px) {
+  html {
+    font-size: 16px;
+  }
+}
+/*========== Media Queries (min-width: 350px) and (max-width: 480px) ==========*/
+@media only screen and (min-width: 799px) and (max-width: 1364px) {
+  html {
+    font-size: 12px;
+  }
+}
+/*========== Media Queries (min-width: 350px) and (max-width: 480px) ==========*/
+@media only screen and (min-width: 350px) and (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+}
+/*========== Media Queries (min-width: 319px) and (max-width: 349px) ==========*/
+@media only screen and (min-width: 319px) and (max-width: 349px) {
+  html {
+    font-size: 12px;
+  }
+}
